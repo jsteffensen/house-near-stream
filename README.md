@@ -1,5 +1,9 @@
 # Find a house for sale in Denmark near a stream
 
+##
+
+* Install nodeJS from https://nodejs.org/en/download to run the script.
+
 
 ## Download data from boligsiden
 
