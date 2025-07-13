@@ -27,6 +27,8 @@ out skel qt;
 ```
 * Export as geojson
 
+![Stream Map](water_in_dk.png)
+
 ## Filter data
 
 * Run ```npm install```
