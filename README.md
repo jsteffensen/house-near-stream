@@ -35,3 +35,7 @@ out skel qt;
 
 * Run ```npm install```
 * Run ```node filterScript.js```
+
+Results will open in your browser:
+
+![Result](result.png)
