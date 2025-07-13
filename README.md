@@ -4,9 +4,10 @@
 ## Download data from boligsiden
 
 * Go to https://www.boligsiden.dk/tilsalg/landejendom/kort?mapBounds=8.548931,55.856524,10.354922,56.443551&splitViewPage=3&priceMax=2000000
-* Hit F12
-* Find the api address and change the param per_page to a large number e.g. https://api.boligsiden.dk/search/cases?addressTypes=farm%2Chobby+farm&per_page=800&highlighted=true&sortBy=random
-* Right click and save as json file.
+* Hit F12 and go to network tab and clear it.
+* On the map zoom to trigger an update.
+* Click each line from the bottom of the network tab to find the first one that has JSON in the Response tab.
+* Copy (ctrl+a -> ctrl+c) and paste it into the houses.json file and save.
 
 ## Download water body data from overpass-turbo
 
@@ -28,3 +29,5 @@ out skel qt;
 
 ## Filter data
 
+* Run ```npm install```
+* Run ```node filterScript.js```
