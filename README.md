@@ -36,7 +36,7 @@ out skel qt;
 
 ![Stream Map](water_in_dk.png)
 
-## Filter data
+## Run script to filter house data according to geo data.
 
 * Run ```npm install```
 * Run ```node filterScript.js```
