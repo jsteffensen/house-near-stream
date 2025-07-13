@@ -1,5 +1,4 @@
 const fs = require('fs');
-const open = (...args) => import('open').then(module => module.default(...args));
 
 // Helper: Calculate distance between two lat/lon points in meters using Haversine formula
 function haversineDistance(lat1, lon1, lat2, lon2) {
@@ -112,13 +111,47 @@ for (let i = 0; i < houses.length; i++) {
 // Output result
 console.log(`Closest distance to waterbody: ${closest} meters`);
 console.log(`Found ${results.length} nearby houses`);
+
 if (results.length > 0) {
-  //console.log(results);
-(async () => {
-  for (const item of results) {
-    console.log(`Opening: ${item.url} at ${item.dist} meters to ${item.name}`);
-    await open(item.url);
-    await new Promise(resolve => setTimeout(resolve, 2000));
-  }
-})();
+	//console.log(results);
+	makeHtml(results);
+}
+function openBrowserTabs(results) {
+	const open = (...args) => import('open').then(module => module.default(...args));
+	
+	(async () => {
+	  for (const item of results) {
+		console.log(`Opening: ${item.url} at ${item.dist} meters to ${item.name}`);
+		await open(item.url);
+		await new Promise(resolve => setTimeout(resolve, 2000));
+	  }
+	})();
+}
+
+function makeHtml(results) {
+	let htmlContent = `
+	<!DOCTYPE html>
+	<html lang="en">
+	<head>
+	  <meta charset="UTF-8" />
+	  <title>Houses Near Streams</title>
+	</head>
+	<body>
+	  <h1>Houses Near Streams</h1>
+	  <ul>
+	`;
+
+	results.forEach(item => {
+	  htmlContent += `<li><a href="${item.url}" target="_blank">${item.url}</a> at ${item.dist} meters to ${item.name}</li>\n`;
+	});
+
+	htmlContent += `
+	  </ul>
+	</body>
+	</html>
+	`;
+
+	// Save HTML file in the same folder as the script
+	fs.writeFileSync('./results.html', htmlContent, 'utf8');
+	console.log('HTML file "results.html" created with links.');
 }
