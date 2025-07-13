@@ -8,8 +8,9 @@
 ## Download data from boligsiden
 
 * Go to https://www.boligsiden.dk/tilsalg/landejendom/kort?mapBounds=8.548931,55.856524,10.354922,56.443551&splitViewPage=3&priceMax=2000000
+* Set filters as you like.
 * Hit F12 and go to network tab and clear it.
-* On the map zoom to trigger an update.
+* On the map zoom or pan slightly to trigger an update.
 * Click each line from the bottom of the network tab to find the first one that has JSON in the Response tab.
 * Copy (ctrl+a -> ctrl+c) and paste it into the houses.json file and save.
 
