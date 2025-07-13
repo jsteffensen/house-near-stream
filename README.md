@@ -11,13 +11,19 @@
 ## Download water body data from overpass-turbo
 
 * Go to https://overpass-turbo.eu/
-* Paste search ```[out:json][timeout:1800];
-area["name"="Denmark"]->.searchArea;
+Paste search
+
+```
+[out:json][timeout:1800];
+area["ISO3166-1"="DK"][admin_level=2]->.searchArea;
 (
   way["waterway"~"river|stream"](area.searchArea);
   relation["waterway"~"river|stream"](area.searchArea);
 );
-out geom;```
+out body;
+>;
+out skel qt;
+```
 * Export as geojson
 
 ## Filter data
