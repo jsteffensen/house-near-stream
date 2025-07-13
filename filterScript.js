@@ -1,5 +1,10 @@
 const fs = require('fs');
 
+////////////////////////////////////////////////
+/////////////////////////// change this value 
+const maxDistanceToStream = 100; // (meters)
+
+
 // Helper: Calculate distance between two lat/lon points in meters using Haversine formula
 function haversineDistance(lat1, lon1, lat2, lon2) {
   const toRad = angle => (angle * Math.PI) / 180;
@@ -99,7 +104,7 @@ for (let i = 0; i < houses.length; i++) {
     closest = house.distanceToWaterbody;
   }
 
-  if (house.distanceToWaterbody < 100) {
+  if (house.distanceToWaterbody < maxDistanceToStream) {
     results.push({
       url: 'https://www.boligsiden.dk/adresse/' + house.address.slug,
       dist: house.distanceToWaterbody,
