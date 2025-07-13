@@ -9,6 +9,8 @@
 * Click each line from the bottom of the network tab to find the first one that has JSON in the Response tab.
 * Copy (ctrl+a -> ctrl+c) and paste it into the houses.json file and save.
 
+![Network tab](network_tab.png)
+
 ## Download water body data from overpass-turbo
 
 * Go to https://overpass-turbo.eu/
@@ -26,6 +28,8 @@ out body;
 out skel qt;
 ```
 * Export as geojson
+
+![Stream Map](water_in_dk.png)
 
 ## Filter data
 
