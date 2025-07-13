@@ -1,4 +1,4 @@
-# Find a house for sale in Denmark near a stream
+# Find a house for sale in Denmark near a river/stream
 
 ##
 
