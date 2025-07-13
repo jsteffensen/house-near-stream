@@ -32,6 +32,7 @@ out body;
 out skel qt;
 ```
 * Export as geojson
+* Save as 'waterbodies_dk.geojson' (already in this repo)
 
 ![Stream Map](water_in_dk.png)
 
