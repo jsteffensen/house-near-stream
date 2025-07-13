@@ -39,6 +39,7 @@ out skel qt;
 ## Run script to filter house data according to geo data.
 
 * Run ```npm install```
+* Change distance filter value (line 7 of the file filterScript.js) to suit your preference.
 * Run ```node filterScript.js```
 
 Results will either open in your browser or save a results.html file depending on how you modify the script:
