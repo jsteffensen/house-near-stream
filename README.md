@@ -11,6 +11,7 @@
 * Set filters as you like.
 * Hit F12 and go to network tab and clear it.
 * On the map zoom or pan slightly to trigger an update.
+* Filter entries on the Network tab for api.boligsiden.dk
 * Click each line from the bottom of the network tab to find the first one that has JSON in the Response tab.
 * Copy (ctrl+a -> ctrl+c) and paste it into the houses.json file and save.
 
