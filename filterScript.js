@@ -119,8 +119,11 @@ console.log(`Found ${results.length} nearby houses`);
 
 if (results.length > 0) {
 	//console.log(results);
-	makeHtml(results);
+	
+	openBrowserTabs(results);
+	//makeHtml(results);
 }
+
 function openBrowserTabs(results) {
 	const open = (...args) => import('open').then(module => module.default(...args));
 	
